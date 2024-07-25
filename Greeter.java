@@ -17,10 +17,15 @@ public class Greeter {
   }
 
   public static void main(String[] args) {
-    String language = args[0];
-    String country = args[1];
-    String name = args[2];
+    if (args.length > 2) {
+      String language = args[0];
+      String country = args[1];
+      String name = args[2];
     Greeter greeter = new Greeter(language, country, name);
     System.out.println(greeter.sayHello());
+    }
+    else {
+      System.out.println("You must provide language, country and name when running!");
+    }
   }
 }
